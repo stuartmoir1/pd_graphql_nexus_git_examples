@@ -1,0 +1,37 @@
+{
+  "name": "example",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node node_modules/.build",
+    "test": "jest",
+    "clean": "rm -rf dist",
+    "style": "prettier --write 'src/**/*'",
+    "build": "yarn -s clean && nexus build",
+    "dev": "nexus dev",
+    "data:seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@nexus/typescript-language-service": "0.1.0-next.3",
+    "nexus": "0.21.0-next.18",
+    "nexus-plugin-prisma": "0.8.0-next.2"
+  },
+  "devDependencies": {
+    "@types/debug": "4.1.5",
+    "@types/faker": "4.1.11",
+    "@types/jest": "25.1.4",
+    "@types/prompts": "2.0.5",
+    "faker": "4.1.0",
+    "jest": "25.2.4",
+    "prettier": "2.0.2",
+    "ts-jest": "25.3.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
